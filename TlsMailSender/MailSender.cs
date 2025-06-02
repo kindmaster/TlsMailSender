@@ -147,11 +147,17 @@ namespace SimpleNetMail
 
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // 예외 발생 시 false 반환 (필요하다면 여기서 예외 메시지를 로깅)
+                Log($"예외 발생: {ex.Message}");
                 return false;
             }
+        }
+
+        private void Log(string message)
+        {
+            File.AppendAllText("C:\\temp\\TlsMailSender.log", $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {message}\n");
         }
     }
 }
