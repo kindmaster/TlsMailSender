@@ -108,7 +108,7 @@ namespace SimpleNetMail
                 // 4) 제목/본문 설정
                 message.Subject = subject ?? string.Empty;
                 message.Body = body ?? string.Empty;
-                message.IsBodyHtml = false; // HTML 메일 전송을 원하면 true로 변경
+                message.IsBodyHtml = true; // HTML 메일 전송을 원하면 true로 변경
 
                 // 5) 첨부파일 처리
                 if (attachments != null && attachments.Length > 0)
@@ -256,7 +256,7 @@ namespace SimpleNetMail
                 // 4) Title/Body setting
                 message.Subject = subject ?? string.Empty;
                 message.Body = body ?? string.Empty;
-                message.IsBodyHtml = false; // HTML 메일 전송을 원하면 true로 변경
+                message.IsBodyHtml = true; // HTML 메일 전송을 원하면 true로 변경
 
                 // 5) 첨부파일 처리
                 if (attachments != null && attachments.Length > 0)
