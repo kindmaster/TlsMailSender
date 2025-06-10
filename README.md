@@ -253,7 +253,6 @@ dn_mailer = NULL // 객체 해제
 *   **SMTP 인증**: 사용하는 SMTP 서버의 인증 방식(계정/비밀번호)이 올바른지 확인해야 합니다. Gmail 같은 서비스는 앱 전용 비밀번호가 필요할 수 있습니다.
 *   **첨부파일 경로**: PowerBuilder 스크립트에서 `lsa_attachments` 배열에 지정하는 파일 경로는 PowerBuilder 애플리케이션이 실행되는 환경에서 실제로 접근 가능한 유효한 경로여야 합니다. 파일이 존재하지 않으면 첨부되지 않습니다.
 *   **에러 처리**: 현재 C# 코드는 예외 발생 시 단순히 C:\Temp\SimpleNetMail_Error.log 파일에 오류 로그를 남깁니다. 좀 더 상세한 로깅이 필요하다면 코드 수정이 필요합니다.
-*   **HTML 본문**: 기본적으로 `message.IsBodyHtml = false;`로 설정되어 Plain Text 본문만 지원합니다. HTML 메일을 보내려면 C# 코드에서 이 부분을 `true`로 변경하고 다시 빌드/Import해야 합니다.
 
 ## 라이선스
 
